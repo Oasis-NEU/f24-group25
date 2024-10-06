@@ -2,7 +2,7 @@
 
 
 function dashboardOption(id){
-    // scrape file for info using ID-number
+    // open file for info using ID-number
     // get image-url, program-name, program-location, program-term
 
     const imageUrl = null
@@ -14,5 +14,7 @@ function dashboardOption(id){
 
 
 function dashboardElement(imageUrl, programName, programLocation, programTerm){
-    return null
+    return (
+        <></>
+    )
 }
