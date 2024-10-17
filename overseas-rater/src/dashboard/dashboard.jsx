@@ -19,11 +19,16 @@ function dashboardOption(id){
 
 function dashboardElement(imageUrl, programName, programLocation, programTerm){
     return (
-        <div class="rounded-lg"> 
-            <h2>{programName}</h2>
-            <p>{programLocation}</p>
-            <p>{programTerm}</p>
-            <img src={imageUrl}  />
+         <div class="rounded-lg border bg-gray-400 border-solid border-black w-96">
+            <h2 class="text-2xl text-red-700 justify-center flex">{programName}</h2>
+            <div class="flex justify-evenly">
+                <div>
+                    <p>{programLocation}</p>
+                    <p>{programTerm}</p>
+                </div>
+                <img src={imageUrl} />
+             </div>
         </div>
+
     )
 }
