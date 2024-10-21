@@ -16,7 +16,7 @@ function program() {
 
     return (
         <div>
-            <div>programName</div>
+            <div>ProgramInfoHero(imageURL, programName)</div>
             <div>imageURL</div>
             <div>programLocation</div>
             <div>programTerm</div>
