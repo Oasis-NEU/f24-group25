@@ -2,12 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import './dashboard/dashboard.jsx'
+import DashboardOption from './dashboard/dashboard.jsx'
 import Navbar from './navbar/navbar.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
       <Navbar/>
@@ -15,7 +13,7 @@ function App() {
 
     </div>
   )
-  
+
 }
 
 
