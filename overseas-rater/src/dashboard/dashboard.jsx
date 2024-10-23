@@ -1,10 +1,3 @@
-
-
-// function testing(){
-//     const url = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cute_dog.jpg/1200px-Cute_dog.jpg"
-//     return dashboardElement(url, "Name", "Place", "Spring")
-// }
-
 function DashboardOption(){
     // open file for info using ID-number
     // get image-url, program-name, program-location, program-term
