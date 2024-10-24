@@ -1,4 +1,4 @@
-function DashboardElement({imageUrl, programName, programLocation, programTerm}){
+export default function DashboardElement({imageUrl, programName, programLocation, programTerm}){
     return (
         <div className="card bg-base-100 w-96 shadow-xl">
         <figure className="px-10 pt-10">
@@ -18,6 +18,3 @@ function DashboardElement({imageUrl, programName, programLocation, programTerm})
 
     )
 }
-
-
-export default DashboardElement
