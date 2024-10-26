@@ -11,6 +11,7 @@ function App() {
       <Navbar/>
       The freshman is not doing any work here!
 
+      <DashboardGrid ids="blank" /> 
     </div>
   )
 
