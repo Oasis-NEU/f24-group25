@@ -9,8 +9,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      The freshman is not doing any work here!
-
+      <div className="h-96"/>
       <DashboardGrid ids="blank" /> 
     </div>
   )

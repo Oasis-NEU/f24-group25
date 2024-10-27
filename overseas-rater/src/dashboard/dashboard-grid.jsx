@@ -23,6 +23,13 @@ export default function DashboardGrid(ids) {
             programLocation: "Scotland",
             programTerm: "Spring 2030",
             imageUrl: "https://media.istockphoto.com/id/622204296/photo/kilchurn-sunset.jpg?s=2048x2048&w=is&k=20&c=zB8RvZjWQe6xGCENM-ZxAtQszBx90P-RNNoQs-WfzMs="
+        },
+
+        {
+            programName: "Program in A Place",
+            programLocation: "Place, Place",
+            programTerm: "Time, Year",
+            imageUrl: "https://img.freepik.com/premium-photo/beautiful-place-sit-with-beautiful-view-sunsetar-169_1101825-11004.jpg?semt=ais_hybrid"
         }
     ]
 
