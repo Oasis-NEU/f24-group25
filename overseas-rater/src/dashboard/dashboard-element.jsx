@@ -11,7 +11,7 @@ export default function DashboardElement({imageUrl, programName, programLocation
            </figure>
         </div>
         <div className="card-body items-center text-center">
-          <h2 className="card-title">{programName}</h2>
+          <h2 className="card-title text-red-500">{programName}</h2>
           <p>{programLocation}, {programTerm}</p>
           <div className="card-actions">
             <button className="btn btn-primary">Explore</button>
