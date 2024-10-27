@@ -10,19 +10,19 @@ export default function DashboardGrid(ids) {
     // }
     
 
-    let opportunities = [ 
+    const opportunities = [ 
         {
             programName: "London Scholars",
             programLocation: "London",
             programTerm: "Spring 2026",
-            url: "https://shorturl.at/DQ8Sy"
+            imageUrl: "https://shorturl.at/DQ8Sy"
         },
           
         {
             programName: "Scottish Scholars",
             programLocation: "Scotland",
             programTerm: "Spring 2030",
-            url: "https://media.istockphoto.com/id/622204296/photo/kilchurn-sunset.jpg?s=2048x2048&w=is&k=20&c=zB8RvZjWQe6xGCENM-ZxAtQszBx90P-RNNoQs-WfzMs="
+            imageUrl: "https://media.istockphoto.com/id/622204296/photo/kilchurn-sunset.jpg?s=2048x2048&w=is&k=20&c=zB8RvZjWQe6xGCENM-ZxAtQszBx90P-RNNoQs-WfzMs="
         }
     ]
 
