@@ -1,4 +1,4 @@
-import Navbar from './navbar/navbar.jsx'
+import Navbar from '../navbar/navbar'
 export default function SignInPage(){
     
 
@@ -8,5 +8,7 @@ export default function SignInPage(){
 
     return (
         <Navbar/>
+        
+
     )
 }
