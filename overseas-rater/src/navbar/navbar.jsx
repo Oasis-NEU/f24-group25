@@ -15,7 +15,8 @@ function Navbar() {
               <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
             </div>
           </div>
-          <li><button className="btn btn-outline btn-error">Login</button></li>
+          <li><button className="btn btn-outline btn-error">Search</button></li>
+          <li><button className="btn btn-error">Login</button></li>
           <li><button className="btn btn-error">Sign Up</button></li>
         </ul>
       </div>
