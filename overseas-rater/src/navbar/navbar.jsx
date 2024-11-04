@@ -19,7 +19,7 @@ function Navbar() {
           </div>
           <li><button className="btn btn-outline btn-error">Search</button></li>
           <li><button onClick={()=>navigate("/sign-in")} className="btn btn-error">Login</button></li>
-          <li><button className="btn btn-error">Sign Up</button></li>
+          <li><button onClick={()=>navigate("/sign-up")} className="btn btn-error">Sign Up</button></li>
         </ul>
       </div>
     </div>
