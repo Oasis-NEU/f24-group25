@@ -6,7 +6,7 @@ function Navbar() {
   const navigate = useNavigate()
   return (
     <div className="navbar bg-base-100">
-      <div className="flex-1">
+      <div className="flex-1" onClick={()=>navigate("/")}>
         <a className="btn btn-ghost text-xl">TravelNEU</a>
       </div>
       <div className="flex-none">
