@@ -1,6 +1,6 @@
 import Navbar from '../navbar/navbar'
-import SignInBox from '../sign-in/sign-in-box';
-export default function SignInPage(){
+import SignInBox from "../sign-in/sign-in-box"
+export default function SignUpPage(){
     
 
 
@@ -10,10 +10,12 @@ export default function SignInPage(){
     return (
         <div>
             <Navbar/>
-            <div className="h-52"/>
-            <div className="flex justify-center">
+            <div className="h-64"/>
+            
             <SignInBox/>
-            </div>
+            
          </div>
+        
+
     )
 }
