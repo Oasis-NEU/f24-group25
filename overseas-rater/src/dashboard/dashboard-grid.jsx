@@ -10,7 +10,7 @@ export default function DashboardGrid(ids) {
     // }
 
     
-    fileText = ""
+    let fileText = ""
 
     const opportunities = JSON.parse(fileText)
 
