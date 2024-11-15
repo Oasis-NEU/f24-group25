@@ -9,7 +9,7 @@ function Navbar() {
       <div className="flex-1 flex items-center">
         <a
           className="btn btn-ghost text-accent font-bold text-xl"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/programs")}
         >
           TravelNEU
         </a>
@@ -17,7 +17,7 @@ function Navbar() {
       <div className="flex-none flex items-center">
         <ul className="menu menu-horizontal px-1 gap-4 flex items-center">
           <li>
-            <a onClick={() => navigate("/")}>Programs</a>
+            <a onClick={() => navigate("/programs")}>Programs</a>
           </li>
           <div className="flex-none gap-2">
             <div className="form-control">
