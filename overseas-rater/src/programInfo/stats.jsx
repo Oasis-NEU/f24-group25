@@ -2,7 +2,7 @@
 
 export default function Stats() {
   return (
-    <div className="card bg-cardBg shadow-x2">
+    <div className="card bg-base-100 shadow-x1">
       <div className="card-body font-body text-black">
         <h2 className="card-title font-body text-accent">Stats</h2>
         <div className="rating">

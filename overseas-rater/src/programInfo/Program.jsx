@@ -18,10 +18,10 @@ function Program() {
             <ProgramInfoHero imageUrl={imageUrl} programName={programName} />
 
             <div className="flex justify-between gap-6 my-6 items-stretch">
-                <div style={{borderRadius: "20px"}} className="flex-1 bg-cardBg">    
+                <div style={{ borderRadius: "20px" }} className="flex-1 bg-base-100 shadow-lg">
                     <ProgramDescription description={programDescription} />
                 </div>
-                <div style={{borderRadius: "20px"}} className="w-1/5 bg-cardBg " >
+                <div style={{ borderRadius: "20px" }} className="w-1/5 bg-base-100 shadow-lg" >
                     <Stats />
                 </div>
             </div>
@@ -29,16 +29,16 @@ function Program() {
             <div className="my-6"></div>
 
             <div className="flex justify-between gap-6 my-6 items-stretch">
-                <div style={{borderRadius: "20px"}} className="w-1/5 bg-cardBg">
+                <div style={{ borderRadius: "20px" }} className="w-1/5 bg-base-100 shadow-lg">
                     <QuickFacts location={programLocation}
                         term={programTerm}
                         numStudents={programCapacity} />
                 </div>
-                <div style={{borderRadius: "20px"}} className="flex-1 bg-cardBg">
+                <div style={{ borderRadius: "20px" }} className="flex-1 bg-base-100 shadow-lg">
                     <Classes classList={classList} />
                 </div>
-                <div style={{borderRadius: "20px"}} className="w-1/5 bg-cardBg">
-                    <div className="card bg-cardBg font-body shadow-x2">
+                <div style={{ borderRadius: "20px" }} className="w-1/5 bg-base-100 shadow-lg">
+                    <div className="card bg-base-100 font-body shadow-x2">
                         <div className="card-body text-black font-body ">
                             <h2 className="card-title font-body text-accent">Last updated:</h2>
                             <p>Today</p>
