@@ -1,22 +1,54 @@
 import ProgramInfoHero from "./hero.jsx";
-import ProgramDescription from "./description.jsx"
-import QuickFacts from "./QuickFacts.jsx"
+import ProgramDescription from "./description.jsx";
+import QuickFacts from "./QuickFacts.jsx";
+import Stats from "./stats.jsx";
+import Classes from "./classes.jsx";
 
 function Program() {
-    const programName = "London Scholars";
+    const programName = "London School of Economics: Summer School";
     const programDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
     const programLocation = "London";
     const programTerm = "Spring 2026";
     const programCapacity = "15";
-    const imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/London_Skyline_%28125508655%29.jpeg/640px-London_Skyline_%28125508655%29.jpeg";
+    const classList = "CS3500: Object-Oriented Design \n CS2500: Fundamentals of Computer Science II";
+    const imageUrl = "https://assets.editorial.aetnd.com/uploads/2019/03/topic-london-gettyimages-760251843-feature.jpg";
 
     return (
-        <div>
-            <ProgramInfoHero imageUrl={imageUrl} programName={programName}/>
-            <ProgramDescription description={programDescription}/>
-            <QuickFacts location={programLocation}
+        <div className="p-10">
+            <ProgramInfoHero imageUrl={imageUrl} programName={programName} />
+
+            <div className="flex justify-between gap-6 my-6 items-stretch">
+                <div style={{borderRadius: "20px"}} className="flex-1 bg-cardBg">    
+                    <ProgramDescription description={programDescription} />
+                </div>
+                <div style={{borderRadius: "20px"}} className="w-1/5 bg-cardBg " >
+                    <Stats />
+                </div>
+            </div>
+
+            <div className="my-6"></div>
+
+            <div className="flex justify-between gap-6 my-6 items-stretch">
+                <div style={{borderRadius: "20px"}} className="w-1/5 bg-cardBg">
+                    <QuickFacts location={programLocation}
                         term={programTerm}
-                        numStudents={programCapacity}/>
+                        numStudents={programCapacity} />
+                </div>
+                <div style={{borderRadius: "20px"}} className="flex-1 bg-cardBg">
+                    <Classes classList={classList} />
+                </div>
+                <div style={{borderRadius: "20px"}} className="w-1/5 bg-cardBg">
+                    <div className="card bg-cardBg font-body shadow-x2">
+                        <div className="card-body text-black font-body ">
+                            <h2 className="card-title font-body text-accent">Last updated:</h2>
+                            <p>Today</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
     );
 }
