@@ -10,7 +10,7 @@ function Navbar() {
         <a className="btn btn-ghost text-xl">TravelNEU</a>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-2">
           <li><a onClick={()=>navigate("/")}>Programs</a></li>
           <div className="flex-none gap-2">
             <div className="form-control">

@@ -1,7 +1,7 @@
 import ProgramInfoHero from "./ProgramInfoHero.jsx";
 import ProgramDescription from "./ProgramDescription.jsx";
 import QuickFacts from "./QuickFacts.jsx";
-import Stats from "./Stats.jsx";
+import Stats from "./stats.jsx";
 import Classes from "./Classes.jsx";
 
 function Program() {
