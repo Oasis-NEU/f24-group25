@@ -1,10 +1,12 @@
-import './App.css'
-
-function ProgamDescription({description}) {
+function ProgamDescription({ description }) {
   return (
-    <div>
-      <h1>Description</h1>
-      <p>{description}</p>
+    <div className="card bg-base-100 w-50 shadow-xl">
+      <div className="card-body">
+        <h2 className="card-title">Program Description</h2>
+        <p>{description}</p>
+      </div>
     </div>
   );
 }
+
+export default ProgamDescription;
