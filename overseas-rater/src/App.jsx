@@ -3,6 +3,7 @@ import './App.css'
 import DashboardGrid from './dashboard/dashboard-grid.jsx'
 import Navbar from './navbar/navbar.jsx'
 import Program from './programInfo/programInfo.jsx'
+import LandingPage from './LandingPage/LandingPage.jsx'
 
 function App() {
   return (

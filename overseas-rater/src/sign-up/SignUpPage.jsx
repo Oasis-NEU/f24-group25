@@ -1,21 +1,13 @@
 import Navbar from '../navbar/navbar'
-import SignInBox from "../sign-in/sign-in-box"
+import SignUpBox from './SignUpBox';
 export default function SignUpPage(){
-    
-
-
-
-
-
     return (
         <div>
             <Navbar/>
-            <div className="h-64"/>
+            <div className="h-52"/>
             
-            <SignInBox/>
+            <SignUpBox/>
             
          </div>
-        
-
     )
 }
