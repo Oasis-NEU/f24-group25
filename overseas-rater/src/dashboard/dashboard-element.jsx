@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function DashboardElement({ image_base64, title, location, semesters }) {
+  const programNavigate = useNavigate()
   return (
 
     <div className="card bg-base-100 w-96 shadow-xl">
@@ -23,7 +26,7 @@ export default function DashboardElement({ image_base64, title, location, semest
         <p>{location}</p>
         <p>Available: {semesters}</p>
         <div className="card-actions">
-          <button className="btn btn-accent text-white">Explore</button>
+          <button onClick={() => programNavigate("/program-info")}  className="btn btn-accent text-white">Explore</button>
         </div>
       </div>
 

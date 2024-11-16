@@ -4,6 +4,7 @@ import programList from '../program_list.json'
 export default function DashboardGrid() {
     // Assuming programList is imported from your JSON file
     const opportunities = programList;
+    
 
     return (
         <div className="flex justify-center">
