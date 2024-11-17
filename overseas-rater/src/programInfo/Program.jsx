@@ -4,6 +4,7 @@ import QuickFacts from "./QuickFacts.jsx";
 import Stats from "./stats.jsx";
 import Classes from "./Classes.jsx";
 import Navbar from "../navbar/navbar.jsx";
+import { useEffect } from "react";
 
 function Program(name, description, location, term, capacity, class_list, url) {
     const programName = "London School of Economics: Summer School";
@@ -13,6 +14,13 @@ function Program(name, description, location, term, capacity, class_list, url) {
     const programCapacity = "15";
     const classList = "CS3500: Object-Oriented Design \n CS2500: Fundamentals of Computer Science II";
     const imageUrl = "https://assets.editorial.aetnd.com/uploads/2019/03/topic-london-gettyimages-760251843-feature.jpg";
+
+    useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+        });
+      }, []);
 
     return (
         <>
