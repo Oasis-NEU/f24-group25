@@ -1,9 +1,10 @@
 import DashboardElement from "./dashboard-element"
 import programList from '../program_list.json'
 
-export default function DashboardGrid() {
+export default function DashboardGrid(searchTerm = "") {
     // Assuming programList is imported from your JSON file
-    const opportunities = programList;
+    const opportunities = programList.filter((opportunity) => (opportunity.title.includes(searchTerm)))
+
     
 
     return (
