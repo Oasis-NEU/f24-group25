@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <Navbar/>
       <Hero/>
-      <DashboardGrid searchTerm = "" /> 
-      <Program/>
+      <DashboardGrid  /> 
+
     </div>
   )
 
