@@ -4,31 +4,83 @@ import QuickFacts from "./QuickFacts.jsx";
 import Stats from "./stats.jsx";
 import Classes from "./Classes.jsx";
 import Navbar from "../navbar/navbar.jsx";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from 'axios';
 
-function Program(name, description, location, term, capacity, class_list, url) {
+/**
+ * Fetches an image from the Unsplash API using axios.
+ * 
+ * @param {*} location the location to search
+ * @returns the image URL
+ */
+async function fetchImageFromLocation(location) {
+    const apiKey = "W7SXa5FR_6EoPJjcs_Jd9PiltIuAKK75m-pww7GkBhM";
+    const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(location)}&client_id=${apiKey}`;
+
+    try {
+        const response = await axios.get(url);
+        const imageUrl = response.data.results[0]?.urls?.regular;
+
+        if (imageUrl) {
+            console.log(`Image for ${location}: ${imageUrl}`);
+            return imageUrl;
+        } else {
+            console.error("No images found!");
+            return null;
+        }
+    } catch (error) {
+        console.error("Error encountered: ", error);
+        return null;
+    }
+}
+
+/**
+ * Builds a program page off of the specified information.
+ * 
+ * @param {*} name the name of the program
+ * @param {*} description the description
+ * @param {*} location the location
+ * @param {*} term the semester(s) this program is offered
+ * @param {*} capacity the number of students who can go
+ * @param {*} class_list the classes offered
+ * @returns the program page
+ */
+function Program(name, description, location, term, capacity, class_list) {
     const programName = "London School of Economics: Summer School";
     const programDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
     const programLocation = "London";
     const programTerm = "Spring 2026";
     const programCapacity = "15";
     const classList = "CS3500: Object-Oriented Design \n CS2500: Fundamentals of Computer Science II";
-    const imageUrl = "https://assets.editorial.aetnd.com/uploads/2019/03/topic-london-gettyimages-760251843-feature.jpg";
+    
+    const [imageURL, setImageURL] = useState(null);
+
+    
 
     useEffect(() => {
+        
+        const fetchData = async () => {
+            const url = await fetchImageFromLocation(programLocation);
+            setImageURL(url);
+        }
+        fetchData();
         window.scrollTo({
           top: 0,
           left: 0,
         });
       }, []);
 
+      
+
     return (
         <>
         <Navbar />
         <div className="p-10">
-            
-            <ProgramInfoHero imageUrl={imageUrl} programName={programName} />
-
+            {
+                (!imageURL) 
+                ? <div>Loading...</div> :
+                <ProgramInfoHero imageUrl={imageURL} programName={programName} />    
+            }
             <div className="flex justify-between gap-6 my-6 items-stretch">
                 <div style={{ borderRadius: "20px" }} className="flex-1 bg-base-100 shadow-lg">
                     <ProgramDescription description={programDescription} />
