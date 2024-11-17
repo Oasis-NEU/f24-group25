@@ -3,6 +3,7 @@ import ProgramDescription from "./ProgramDescription.jsx";
 import QuickFacts from "./QuickFacts.jsx";
 import Stats from "./stats.jsx";
 import Classes from "./Classes.jsx";
+import Navbar from "../navbar/navbar.jsx";
 
 function Program(name, description, location, term, capacity, class_list, url) {
     const programName = "London School of Economics: Summer School";
@@ -14,7 +15,10 @@ function Program(name, description, location, term, capacity, class_list, url) {
     const imageUrl = "https://assets.editorial.aetnd.com/uploads/2019/03/topic-london-gettyimages-760251843-feature.jpg";
 
     return (
+        <>
+        <Navbar />
         <div className="p-10">
+            
             <ProgramInfoHero imageUrl={imageUrl} programName={programName} />
 
             <div className="flex justify-between gap-6 my-6 items-stretch">
@@ -50,6 +54,7 @@ function Program(name, description, location, term, capacity, class_list, url) {
 
 
         </div>
+        </>
     );
 }
 
