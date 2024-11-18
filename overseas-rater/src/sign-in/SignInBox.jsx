@@ -1,4 +1,19 @@
+import { useState } from 'react'
+import { supabase } from '../../supabaseClient'
+
 export default function SignInBox() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleSignIn = async () => {
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    if (error) {
+      console.error('Error signing in:', error.message)
+    } else {
+      console.log('Signed in successfully')
+    }
+  }
+
   return (
     <div className="flex justify-center">
       <div className="card bg-base-100 w-auto shadow-xl border-4 border-black p-5">
@@ -12,7 +27,13 @@ export default function SignInBox() {
             >
               <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
             </svg>
-            <input type="text" class="grow" placeholder="Username or Email" />
+            <input
+              type="text"
+              className="grow"
+              placeholder="Username or Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </label>
           <div className="h-5" />
           <label class="input input-bordered flex items-center gap-2">
