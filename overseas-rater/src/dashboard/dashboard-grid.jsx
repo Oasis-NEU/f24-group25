@@ -2,10 +2,10 @@ import DashboardElement from "./dashboard-element";
 import programList from "../program_list.json";
 import Fuse from "fuse.js";
 
-export default function DashboardGrid(searchTerm = "") {
+export default function DashboardGrid(syntheticEvent, event, searchTerm ="") {
+  //the syntheticEvent and event handlers are given by jsx and ignoreed
   // Assuming programList is imported from your JSON file
-  // const opportunities = programList
-
+  
   const fuse = new Fuse(programList, {
     keys: ["title", "location"],
     includeScore: true,
@@ -13,7 +13,7 @@ export default function DashboardGrid(searchTerm = "") {
     minMatchCharLength: 0,
   });
 
-  const opportunities =  programList //fuse.search(searchTerm);
+  const opportunities =  (searchTerm === "") ?  programList : fuse.search(searchTerm) 
 
   return (
     <div className="flex justify-center">

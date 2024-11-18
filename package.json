@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "@supabase/supabase-js": "^2.45.4"
+    "@supabase/supabase-js": "^2.45.4",
+    "axios": "^1.7.7",
+    "fuse.js": "^7.0.0"
   },
   "devDependencies": {
     "daisyui": "^4.12.12",

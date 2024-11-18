@@ -6,13 +6,13 @@ import Program from './programInfo/Program.jsx'
 import LandingPage from './LandingPage/LandingPage.jsx'
 import Hero from './Hero.jsx'
 
+
 function App() {
   return (
     <div className="App">
       <Navbar/>
       <Hero/>
       <DashboardGrid  /> 
-
     </div>
   )
 
