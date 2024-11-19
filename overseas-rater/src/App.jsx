@@ -7,12 +7,13 @@ import LandingPage from './LandingPage/LandingPage.jsx'
 import Hero from './Hero.jsx'
 
 
-function App() {
+function App(syntheticEvent, event, searchTerm = "lon") {
+  
   return (
     <div className="App">
       <Navbar/>
       <Hero/>
-      <DashboardGrid  /> 
+      <DashboardGrid searchTerm={searchTerm} /> 
     </div>
   )
 

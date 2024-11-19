@@ -13,7 +13,9 @@ export default function DashboardGrid(syntheticEvent, event, searchTerm ="") {
     minMatchCharLength: 0,
   });
 
-  const opportunities =  (searchTerm === "") ?  programList : fuse.search(searchTerm) 
+  const opportunities =  (searchTerm === "") ?  programList : fuse.search(searchTerm).map((program) => program.item) 
+  console.log(searchTerm)
+
 
   return (
     <div className="flex justify-center">
