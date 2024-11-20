@@ -2,34 +2,34 @@ function ProgramInfoHero({ imageUrl, programName }) {
   return (
     <div
       style={{
-        maxHeight: '500px',
-        overflow: 'clip',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: '20px'
+        maxHeight: "500px",
+        overflow: "clip",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "20px",
       }}
     >
       <div
         className="hero min-h-screen"
         style={{
           backgroundImage: `url(${imageUrl})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          maxHeight: '200px',
-          height: '100vh',
-          position: 'relative',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          maxHeight: "200px",
+          height: "100vh",
+          position: "relative",
         }}
       >
         <div className="hero-overlay bg-opacity-40"></div>
         <div
           className="hero-content"
           style={{
-            position: 'absolute',
-            bottom: '140px',
-            left: '20px',
-            color: '#fff'
+            position: "absolute",
+            bottom: "140px",
+            left: "20px",
+            color: "#fff",
           }}
         >
           <div className="max-w-full">

@@ -3,9 +3,14 @@ import "./navbar.css";
 import { useNavigate } from "react-router-dom";
 
 
-function Navbar() {
+function Navbar({ setSearchTerm }) {
   const navigate = useNavigate();
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
+
+  const handleSearch = () => {
+    setSearchTerm(search); // Update App's state
+    navigate("/programs"); // Navigate after updating
+  }
   return (
     <div className="navbar bg-background font-body items-center justify-between px-4">
       <div className="flex-1 flex items-center">
@@ -23,13 +28,15 @@ function Navbar() {
           </li>
           <div className="flex-none gap-2">
             <div className="form-control">
-              <input type="text" value={search} onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search" className="input input-bordered w-24 md:w-auto" 
+              <input type="text" value={search} 
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search" 
+              className="input input-bordered w-24 md:w-auto" 
               />
             </div>
           </div>
           <li>
-            <button onClick={() => {navigate("/programs");console.log(search)}} className="btn">
+            <button onClick={handleSearch} className="btn">
               Search
             </button>
           </li>

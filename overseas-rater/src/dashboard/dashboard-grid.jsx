@@ -14,7 +14,7 @@ export default function DashboardGrid(syntheticEvent, event, searchTerm ="") {
   });
 
   const opportunities =  (searchTerm === "") ?  programList : fuse.search(searchTerm).map((program) => program.item) 
-  console.log(searchTerm)
+  console.log((searchTerm === '') ? null : searchTerm)
 
 
   return (
