@@ -12,6 +12,13 @@ function Navbar({ setSearchTerm }) {
     setSearchTerm(search); // Update App's state
     navigate("/programs"); // Navigate after updating
   }
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter"){
+      handleSearch()
+    }
+  }
+
   return (
     <div className="navbar bg-background font-body items-center justify-between px-4">
       <div className="flex-1 flex items-center">
@@ -31,6 +38,7 @@ function Navbar({ setSearchTerm }) {
             <div className="form-control">
               <input type="text" value={search} 
               onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={handleKeyPress}
               placeholder="Search" 
               className="input input-bordered w-24 md:w-auto" 
               />
