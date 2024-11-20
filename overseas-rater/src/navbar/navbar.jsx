@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 function Navbar({ setSearchTerm }) {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
+  
 
   const handleSearch = () => {
     setSearchTerm(search); // Update App's state
