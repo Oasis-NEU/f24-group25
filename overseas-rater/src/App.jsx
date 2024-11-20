@@ -5,10 +5,11 @@ import Navbar from "./navbar/navbar.jsx";
 import Program from "./programInfo/Program.jsx";
 import LandingPage from "./LandingPage/LandingPage.jsx";
 import Hero from "./Hero.jsx";import ReviewForm from "./reviewForm/ReviewForm.jsx";
+import ReviewForm from "./reviewForm/ReviewForm.jsx";
 
 
 function App() {
-  //console.log(searchTerm)
+  
   const [searchTerm, setSearchTerm] = useState('');
   return (
     <div className="App">
