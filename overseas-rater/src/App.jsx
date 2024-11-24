@@ -7,6 +7,7 @@ import LandingPage from "./LandingPage/LandingPage.jsx";
 import Hero from "./Hero.jsx";
 import ReviewForm from "./reviewForm/ReviewForm.jsx";
 import UserPage from "./userPage/UserPage.jsx";
+import { AuthProvider } from './contexts/AuthContext'
 
 
 function App() {
@@ -14,9 +15,11 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   return (
     <div className="App">
+      <AuthProvider>
       <Navbar setSearchTerm={setSearchTerm}/>
       <Hero />
       <DashboardGrid searchTerm={searchTerm}/>
+      </AuthProvider>
     </div>
   );
 }
