@@ -1,4 +1,4 @@
-import Navbar from '../navbar/Navbar'
+import Navbar from './navbar/Navbar'
 import SignInBox from './SignInBox';
 export default function SignInPage(){
     return (

@@ -30,7 +30,7 @@ export default function SignInBox() {
 
       if (error) throw error
 
-      window.location.href = './programs'
+      window.location.href = './user'
       
     } catch (err) {
       setError(err.message)

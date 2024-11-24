@@ -44,7 +44,7 @@ export default function SignUpBox() {
       if (authError) throw authError
 
       setSuccess(true)
-      window.location.href = './programs'
+      window.location.href = './user'
       
     } catch (err) {
       setError(err.message)

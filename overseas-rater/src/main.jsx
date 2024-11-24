@@ -12,6 +12,7 @@ import LandingPage from './LandingPage/LandingPage.jsx'
 import SignInPage from './sign-in/SignInPage.jsx'
 import SignUpPage from './sign-up/SignUpPage.jsx'
 import ReviewForm from "./reviewForm/ReviewForm.jsx";
+import UserPage from "./userPage/UserPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,9 +40,14 @@ const router = createBrowserRouter([
     element: <Program />
   },
 
+  // {
+  //   path: '/review-form',
+  //   element: <ReviewForm />
+  // }
+
   {
-    path: '/review-form',
-    element: <ReviewForm />
+    path: '/user',
+    element: <UserPage />
   }
 
 ])

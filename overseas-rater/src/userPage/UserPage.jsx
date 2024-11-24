@@ -1,10 +1,48 @@
+import { useState, useEffect } from 'react';
+import { supabase } from '../../supabaseClient';
 import UserHero from "./UserHero";
 import DashboardElement from "../dashboard/dashboard-element";
 import programList from "../program_list.json";
 import Navbar from "../navbar/navbar";
+import { useNavigate } from 'react-router-dom';
 
 export default function UserPage() {
-    const name = "Laith Taher";
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const navigate = useNavigate(); // or use Next.js router
+
+    useEffect(() => {
+        // Check if user is authenticated
+        const checkUser = async () => {
+            try {
+                const { data: { user: authUser } } = await supabase.auth.getUser();
+                
+                if (!authUser) {
+                    // Redirect to login if not authenticated
+                    navigate('/login');
+                    return;
+                }
+
+                // Fetch user profile data
+                const { data: profile, error: profileError } = await supabase
+                    .from('users')
+                    .select('*')
+                    .eq('id', authUser.id)
+                    .single();
+
+                if (profileError) throw profileError;
+
+                setUser(profile);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        checkUser();
+    }, [navigate]);
 
     const UserCarousel = ({ programList }) => {
         return (
@@ -25,10 +63,31 @@ export default function UserPage() {
         );
     };
 
+    if (loading) {
+        return (
+            <div className="w-full h-screen flex items-center justify-center">
+                <div className="loading loading-spinner loading-lg"></div>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="w-full h-screen flex items-center justify-center text-red-500">
+                Error loading user profile: {error}
+            </div>
+        );
+    }
+
     return (
         <div className="w-full">
             <Navbar />
-            <UserHero name={name} />
+            <UserHero 
+                name={user?.full_name}
+                department={user?.department}
+                major={user?.major}
+                graduationYear={user?.graduation_year}
+            />
             <div className="text-left text-xl font-bold text-body ml-6 mb-4">
                 Saved Programs
             </div>

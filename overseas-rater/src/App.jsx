@@ -7,7 +7,7 @@ import LandingPage from "./LandingPage/LandingPage.jsx";
 import Hero from "./Hero.jsx";
 import ReviewForm from "./reviewForm/ReviewForm.jsx";
 import UserPage from "./userPage/UserPage.jsx";
-import { AuthProvider } from './contexts/AuthContext'
+import { AuthProvider } from './contexts/AuthContext.jsx'
 
 
 function App() {
