@@ -20,7 +20,7 @@ export default function UserPage() {
                 
                 if (!authUser) {
                     // Redirect to login if not authenticated
-                    navigate('/login');
+                    navigate('/sign-in');
                     return;
                 }
 
