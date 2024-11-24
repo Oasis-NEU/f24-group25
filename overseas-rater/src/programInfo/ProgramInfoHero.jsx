@@ -27,7 +27,7 @@ function ProgramInfoHero({ imageUrl, programName }) {
           className="hero-content"
           style={{
             position: "absolute",
-            bottom: "140px",
+            bottom: "210px",
             left: "20px",
             color: "#fff",
           }}

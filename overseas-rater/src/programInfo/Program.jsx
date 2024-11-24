@@ -52,68 +52,68 @@ function Program(name, description, location, term, capacity, class_list) {
     const programTerm = "Spring 2026";
     const programCapacity = "15";
     const classList = "CS3500: Object-Oriented Design \n CS2500: Fundamentals of Computer Science II";
-    
+
     const [imageURL, setImageURL] = useState(null);
 
-    
+
 
     useEffect(() => {
-        
+
         const fetchData = async () => {
             const url = await fetchImageFromLocation(programLocation);
             setImageURL(url);
         }
         fetchData();
         window.scrollTo({
-          top: 0,
-          left: 0,
+            top: 0,
+            left: 0,
         });
-      }, []);
+    }, []);
 
-      
+
 
     return (
         <>
-        <Navbar />
-        <div className="p-10">
-            {
-                (!imageURL) 
-                ? <div>Loading...</div> :
-                <ProgramInfoHero imageUrl={imageURL} programName={programName} />    
-            }
-            <div className="flex justify-between gap-6 my-6 items-stretch">
-                <div style={{ borderRadius: "20px" }} className="flex-1 bg-base-100 shadow-lg">
-                    <ProgramDescription description={programDescription} />
-                </div>
-                <div style={{ borderRadius: "20px" }} className="w-1/5 bg-base-100 shadow-lg" >
-                    <Stats />
-                </div>
-            </div>
-
-            <div className="my-6"></div>
-
-            <div className="flex justify-between gap-6 my-6 items-stretch">
-                <div style={{ borderRadius: "20px" }} className="w-1/5 bg-base-100 shadow-lg">
-                    <QuickFacts location={programLocation}
-                        term={programTerm}
-                        numStudents={programCapacity} />
-                </div>
-                <div style={{ borderRadius: "20px" }} className="flex-1 bg-base-100 shadow-lg">
-                    <Classes classList={classList} />
-                </div>
-                <div style={{ borderRadius: "20px" }} className="w-1/5 bg-base-100 shadow-lg">
-                    <div className="card bg-base-100 font-body shadow-x2">
-                        <div className="card-body text-black font-body ">
-                            <h2 className="card-title font-body text-accent">Last updated:</h2>
-                            <p>Today</p>
-                        </div>
+            <Navbar />
+            <div className="p-10">
+                {
+                    (!imageURL)
+                        ? <div>Loading...</div> :
+                        <ProgramInfoHero imageUrl={imageURL} programName={programName} />
+                }
+                <div className="flex justify-between gap-6 my-6 items-stretch">
+                    <div style={{ borderRadius: "20px" }} className="flex-1 bg-base-100 shadow-lg">
+                        <ProgramDescription description={programDescription} />
+                    </div>
+                    <div style={{ borderRadius: "20px" }} className="w-1/5 bg-base-100 shadow-lg" >
+                        <Stats />
                     </div>
                 </div>
 
+                <div className="my-6"></div>
+
+                <div className="flex justify-between gap-6 my-6 items-stretch">
+                    <div style={{ borderRadius: "20px" }} className="w-1/5 bg-base-100 shadow-lg">
+                        <QuickFacts location={programLocation}
+                            term={programTerm}
+                            numStudents={programCapacity} />
+                    </div>
+                    <div style={{ borderRadius: "20px" }} className="flex-1 bg-base-100 shadow-lg">
+                        <Classes classList={classList} />
+                    </div>
+                    <div style={{ borderRadius: "20px" }} className="w-1/5 bg-base-100 shadow-lg">
+                        <div className="card bg-base-100 font-body shadow-x2">
+                            <div className="card-body text-black font-body ">
+                                <h2 className="card-title font-body text-accent">Last updated:</h2>
+                                <p>Today</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
             </div>
-
-
-        </div>
         </>
     );
 }

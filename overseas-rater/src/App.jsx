@@ -6,7 +6,7 @@ import Program from "./programInfo/Program.jsx";
 import LandingPage from "./LandingPage/LandingPage.jsx";
 import Hero from "./Hero.jsx";
 import ReviewForm from "./reviewForm/ReviewForm.jsx";
-
+import UserPage from "./userPage/UserPage.jsx";
 
 
 function App() {

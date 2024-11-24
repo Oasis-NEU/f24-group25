@@ -2,7 +2,7 @@ import DashboardElement from "./dashboard-element";
 import programList from "../program_list.json";
 import Fuse from "fuse.js";
 
-export default function DashboardGrid(syntheticEvent, event, searchTerm ="l") {
+export default function DashboardGrid(syntheticEvent, event, searchTerm = "l") {
   //the syntheticEvent and event handlers are given by jsx and ignoreed
   // Assuming programList is imported from your JSON file
   //console.log(syntheticEvent)
@@ -13,7 +13,7 @@ export default function DashboardGrid(syntheticEvent, event, searchTerm ="l") {
     minMatchCharLength: 0,
   });
   const search = syntheticEvent.searchTerm
-  const opportunities =  (search === "") ?  programList : fuse.search(search).map((program) => program.item) 
+  const opportunities = (search === "") ? programList : fuse.search(search).map((program) => program.item)
   //console.log((searchTerm === '') ? null : search)
 
 
